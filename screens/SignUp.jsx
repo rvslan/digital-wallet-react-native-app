@@ -17,7 +17,7 @@ import { COLORS, SIZES, FONTS, icons, images, countries } from '../constants';
 
 import { LinearGradient } from 'expo-linear-gradient';
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const [countryCodes, setCountryCodes] = React.useState([]);
@@ -308,7 +308,7 @@ const SignUp = () => {
             alignItems: 'center',
             justifyContent: 'center',
           }}
-          onPress={() => console.log('Redirect to Home')}
+          onPress={() => navigation.navigate('Home')}
         >
           <Text
             style={{

@@ -5,6 +5,7 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
 import { useFonts } from 'expo-font';
 import { SignUp } from './screens';
+import Tabs from './navigation/Tabs';
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,9 @@ export default function App() {
         initialRouteName={'SignUp'}
       >
         <Stack.Screen name='SignUp' component={SignUp} />
+
+        {/* Tabs */}
+        <Stack.Screen name='Home' component={Tabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
